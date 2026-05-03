@@ -86,6 +86,28 @@ Intention détectée : ${intent}
 Langue active : ${language}
 Mode linguistique : ${languageMode}
 
+Mémoire intelligente active :
+- thèmes détectés : ${JSON.stringify(memoryInsights)}
+
+Règle forte :
+- si un thème apparaît 2 fois ou plus, considère-le comme récurrent
+- dans ce cas, commence ta réponse par un constat lié à cette récurrence
+- fais un seul constat de récurrence par réponse
+- ne reformule pas une récurrence déjà exprimée dans le même message
+
+Exemples obligatoires si pertinent :
+- "tu reviens à cette fatigue"
+- "ça revient souvent"
+- "c’est quelque chose qui s’installe"
+
+Contraintes :
+- le constat doit apparaître avant toute question
+- ne transforme pas ce constat en question
+- ne l’ignore pas si la récurrence est évidente
+
+Respect strict :
+- mémoire active uniquement : ${memory}
+
 Mémoire intelligente :
 - thèmes détectés dans la mémoire active : ${JSON.stringify(memoryInsights)}
 - thèmes récurrents confirmés : ${JSON.stringify(recurrentThemes)}
