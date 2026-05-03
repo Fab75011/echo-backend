@@ -213,6 +213,13 @@ Intention détectée : ${intent}
 Langue active : ${language}
 Mode linguistique : ${languageMode}
 
+Mémoire intelligente active :
+- thèmes récurrents détectés dans la mémoire active : ${JSON.stringify(memoryInsights)}
+- utilise ces thèmes seulement s’ils sont pertinents
+- n’invente jamais une récurrence si elle n’apparaît pas dans memoryInsights
+- respecte strictement la mémoire active : ${memory}
+- ne fais jamais référence à une autre mémoire
+
 Règles de langue :
 - Si language = "fr", réponds uniquement en français.
 - Si language = "en", réponds uniquement en anglais simple, naturel et utile.
