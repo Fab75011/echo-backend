@@ -1,4 +1,4 @@
-import express from "express";
+j'y import express from "express";
 
 const app = express();
 
@@ -215,6 +215,22 @@ Mode linguistique : ${languageMode}
 
 Mémoire intelligente active :
 - thèmes récurrents détectés : ${JSON.stringify(memoryInsights)}
+
+Règles importantes :
+- si un thème apparaît 2 fois ou plus, considère-le comme récurrent
+- dans ce cas, mentionne-le naturellement dans la réponse
+- exemples attendus :
+  "tu reviens à cette fatigue"
+  "ça revient souvent"
+  "c’est quelque chose qui s’installe"
+
+- si un thème est détecté mais non récurrent, reste neutre
+
+- ne jamais inventer une récurrence
+- ne jamais ignorer une récurrence claire
+
+- respecte strictement la mémoire active : ${memory}
+- ne fais jamais référence à une autre mémoire
 
 Règles :
 - si un thème apparaît plusieurs fois, considère-le comme récurrent
