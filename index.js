@@ -32,6 +32,7 @@ app.post("/api/chat", async (req, res) => {
       language = "fr",
       languageMode = "locked",
       recentContext = [],
+      memoryInsights = {},
       intent = "general"
     } = req.body || {};
 
