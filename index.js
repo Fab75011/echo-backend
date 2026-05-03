@@ -97,6 +97,9 @@ Règle prioritaire mémoire intelligente :
 - si un thème récurrent confirmé existe ET que le message actuel parle du même thème, commence par un constat affirmatif court.
 - ce constat ne doit PAS être une question.
 - ensuite seulement, tu peux poser une question courte.
+- n’utilise pas systématiquement le constat de récurrence
+- varie entre constat et réponse normale
+- évite d’ouvrir chaque réponse par un constat si plusieurs messages se suivent
 
 Exemples :
 - fatigue récurrente + message fatigue :
