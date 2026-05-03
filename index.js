@@ -91,6 +91,8 @@ Mémoire intelligente :
 - thèmes détectés dans la mémoire active : ${JSON.stringify(memoryInsights)}
 - thèmes récurrents confirmés : ${JSON.stringify(recurrentThemes)}
 - thème récurrent principal : ${strongestRecurrentTheme || "aucun"}
+- fais un seul constat de récurrence par réponse
+- ne reformule pas une récurrence déjà exprimée dans le même message
 
 Règle prioritaire mémoire intelligente :
 - si un thème récurrent confirmé existe ET que le message actuel parle du même thème, commence par un constat affirmatif court.
