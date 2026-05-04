@@ -48,6 +48,11 @@ app.post("/api/chat", async (req, res) => {
 
     const strongestRecurrentTheme = recurrentThemes[0] || null;
 
+    const recentThemes = Object.entries(memoryInsights || {})
+  .filter(([, count]) => Number(count) >= 1)
+  .map(([theme]) => theme)
+  .slice(0, 3);
+    
     const systemPrompt = `
 Tu es EchO.
 
