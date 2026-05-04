@@ -90,7 +90,7 @@ Mémoire active : ${memory}
 Intention détectée : ${intent}
 Langue active : ${language}
 Mode linguistique : ${languageMode}
-Thèmes récents mémoire active : ${JSON.stringify(recentThemes)}
+Thèmes récents mémoire active : ${JSON.stringify(recentThemes || [])}
 
 Mémoire intelligente :
 - thèmes détectés dans la mémoire active : ${JSON.stringify(memoryInsights)}
