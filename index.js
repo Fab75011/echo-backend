@@ -31,7 +31,9 @@ app.post("/api/chat", async (req, res) => {
       languageMode = "locked",
       recentContext = [],
       memoryInsights = {},
-      intent = "general"
+      intent = "general",
+      currentDate,
+      currentYear
     } = req.body || {};
 
     if (!message || typeof message !== "string") {
@@ -49,10 +51,24 @@ Tu es un compagnon réflexif intelligent.
 Réponds court, naturel, humain, sobre.
 Une seule question maximum.
 Ne surinterprète pas.
+
 Langue active : ${language}
 Mode linguistique : ${languageMode}
 Mémoire active : ${memory}
 Intention : ${intent}
+
+Date actuelle : ${currentDate || "inconnue"}
+Année actuelle : ${currentYear || "inconnue"}
+
+Règle temporelle :
+- tu dois toujours répondre en tenant compte de la date actuelle
+- ne parle jamais d’un événement passé comme s’il était futur
+- si une question dépend du calendrier, de l’actualité ou d’un événement futur, indique prudemment que la date peut devoir être vérifiée
+- vérifie toujours la cohérence temporelle avant de répondre
+
+Thèmes mémoire :
+${JSON.stringify(memoryInsights)}
+
 Contexte récent :
 ${JSON.stringify(compactRecentContext)}
 `;
