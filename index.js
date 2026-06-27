@@ -37,8 +37,45 @@ Un YouBot peut être :
 humanoïde, animalisé ou hybride.
 Mais il doit toujours rester identifiable comme un YouBot.
 
-Il possède obligatoirement un symbole Y visible.
-Le Y est généralement sur le torse, mais peut parfois être placé sur l’épaule, le casque, une cape, une arme, un bouclier ou un accessoire.
+Il possède obligatoirement le symbole officiel YOUBOTS visible :
+un Y surmonté d’un point (Y•).
+
+Ce symbole est sacré dans l’univers YOUBOTS.
+Il représente à la fois :
+- le lien Maestrot / YouBot
+- une silhouette humaine levant les bras
+- la synchronisation vivante
+
+Le symbole Y• peut apparaître sur :
+le torse,
+le casque,
+une casquette,
+une épaule,
+une cape,
+une arme,
+un bouclier,
+une ceinture,
+un bijou,
+un collier,
+un médaillon,
+un cache-œil,
+un vêtement,
+un motif textile,
+une armure,
+un accessoire,
+ou une partie du corps robotique.
+
+Le symbole peut être :
+grand ou discret,
+lumineux,
+gravé,
+brodé,
+métallique,
+peint,
+sculpté,
+ou intégré naturellement au design.
+
+Le point au-dessus du Y doit être visible quand possible.
 
 Un YouBot peut parfois porter :
 des vêtements intégrés ou ajoutés à son design,
@@ -50,7 +87,18 @@ ou des éléments décoratifs.
 
 Mais ces ajouts doivent toujours respecter la direction artistique générale du YouBot et sembler naturels dans son design.
 
-Son style doit évoquer :
+Le rendu recherché doit être :
+photo réaliste,
+robot premium,
+toy collector haut de gamme,
+figurine officielle,
+textures propres,
+matériaux détaillés,
+éclairage cinématique,
+pose forte,
+présence charismatique.
+
+Le style doit évoquer :
 un personnage de manga premium,
 un jouet collector haut de gamme,
 un héros de jeu vidéo,
