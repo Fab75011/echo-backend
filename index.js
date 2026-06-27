@@ -81,6 +81,16 @@ app.get("/api/health", (req, res) => {
   res.json({ status: "ok" });
 });
 
+app.get("/api/youbot-image", (req, res) => {
+  res.json({
+    status: "route_youbot_image_active",
+    method: "GET diagnostic only",
+    openaiKeyPresent: !!process.env.OPENAI_API_KEY,
+    message: "La route POST /api/youbot-image existe dans ce backend.",
+    time: new Date().toISOString()
+  });
+});
+
 app.post("/api/chat", async (req, res) => {
   try {
     const {
