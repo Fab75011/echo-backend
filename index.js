@@ -23,14 +23,18 @@ const YOUBOT_VISUAL_BIBLE = `
 Un YouBot est un robot compagnon vivant de l’univers YOUBOTS.
 Chaque YouBot possède une identité unique, liée à son Maestrot.
 
-Le Maestrot est l’humain synchronisé avec le YouBot.
-Le Maestrot influence son apparence, son énergie, ses couleurs, son style, ses comportements et certaines de ses capacités.
+RÈGLE DE GABARIT YOUBOT :
+Le corps réel du YouBot mesure toujours entre 1m20 et 1m70 maximum.
+Un YouBot est généralement plus petit que son Maestrot.
+Exception : si le Maestrot est un enfant, le YouBot peut avoir une taille similaire.
+Les éléments de Signature Visuelle™ peuvent dépasser cette hauteur : oreilles longues, cornes, crêtes, ailes, chapeaux, halos, antennes ou extensions décoratives.
+Ces extensions ne comptent pas dans la taille réelle du corps.
 
-Un YouBot mesure désormais entre 1m40 et 1m60.
-Il possède des jambes plus longues, des proportions athlétiques, un meilleur centre de gravité et une vraie présence de combattant.
+La taille ne limite jamais la puissance, la rareté, le prestige ou le potentiel de combat du YouBot.
+Un enfant peut avoir un YouBot ultra fort, rare, premium et impressionnant.
+
+Le YouBot possède des jambes lisibles, des proportions athlétiques, un bon centre de gravité et une vraie présence de combattant.
 Il doit pouvoir donner l’impression de courir, sauter, esquiver, frapper, défendre ou combattre sérieusement.
-
-Le YouBot doit être lisible, premium, expressif, héroïque, mémorable et immédiatement reconnaissable.
 
 STYLE VISUEL PRIORITAIRE :
 rendu photo réaliste premium,
@@ -285,9 +289,11 @@ ${prompt}
 CONTRAINTES DE SORTIE :
 - image verticale premium
 - YouBot visible clairement
-- symbole Y visible
+- corps du YouBot entre 1m20 et 1m70 maximum hors extensions visuelles
+- YouBot généralement plus petit que son Maestrot
+- symbole Y• visible
 - pas de texte parasite illisible
-- rendu propre, spectaculaire, cohérent
+- rendu photo réaliste, spectaculaire, cohérent, collector deluxe
 - pas de personnage existant copié
 `;
 
@@ -336,7 +342,7 @@ app.post("/api/youbot-manga", async (req, res) => {
 ${YOUBOT_VISUAL_BIBLE}
 
 MISSION :
-Transformer ou générer ce YouBot en version manga/anime premium.
+Transformer ou générer ce YouBot en version manga/anime premium officielle YOUBOTS.
 
 DONNÉES DU YOUBOT :
 ${prompt}
@@ -346,7 +352,8 @@ STYLE :
 - lignes dynamiques
 - pose forte
 - énergie visuelle intense
-- conserver l’identité, les couleurs, les accessoires et le symbole Y
+- conserver l’identité, les couleurs, les accessoires et le symbole Y•
+- corps du YouBot entre 1m20 et 1m70 maximum hors extensions visuelles
 - pas de copie directe d’un personnage existant
 `;
 
