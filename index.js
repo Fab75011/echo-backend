@@ -24,92 +24,73 @@ Un YouBot est un robot compagnon vivant de l’univers YOUBOTS.
 Chaque YouBot possède une identité unique, liée à son Maestrot.
 
 Le Maestrot est l’humain synchronisé avec le YouBot.
-Le Maestrot influence directement son apparence, son énergie, ses couleurs, son style, ses comportements et certaines de ses capacités.
-Le YouBot reflète donc une partie de l’âme, des goûts, des passions, des défauts et des qualités de son Maestrot.
+Le Maestrot influence son apparence, son énergie, ses couleurs, son style, ses comportements et certaines de ses capacités.
 
-Un YouBot mesure toujours entre 1m20 et 1m40.
-Sa silhouette doit être lisible, premium, expressive, héroïque et immédiatement reconnaissable.
+Un YouBot mesure désormais entre 1m40 et 1m60.
+Il possède des jambes plus longues, des proportions athlétiques, un meilleur centre de gravité et une vraie présence de combattant.
+Il doit pouvoir donner l’impression de courir, sauter, esquiver, frapper, défendre ou combattre sérieusement.
 
-Son design dépend du questionnaire du Maestrot :
+Le YouBot doit être lisible, premium, expressif, héroïque, mémorable et immédiatement reconnaissable.
+
+STYLE VISUEL PRIORITAIRE :
+rendu photo réaliste premium,
+robot qui pourrait exister dans la vraie vie,
+jouet collector deluxe haut de gamme,
+matières crédibles,
+éclairage cinématographique,
+présence impressionnante.
+
+QUALITÉ DES MATÉRIAUX :
+matériaux premium réalistes,
+plaques mécaniques détaillées,
+fibres techniques,
+textiles intégrés,
+coutures visibles,
+tissus crédibles,
+câblage discret,
+joints mécaniques visibles,
+articulations fonctionnelles,
+lumières fonctionnelles,
+micro-détails secondaires,
+usure légère,
+rayures fines,
+salissures réalistes,
+poids visuel,
+finition collector deluxe.
+
+Le design dépend du questionnaire du Maestrot :
 personnalité, passions, couleurs, univers, style de vie, émotions, défauts, qualités, goûts culturels, sports, métiers, humour ou centres d’intérêt.
 
-Un YouBot peut être :
-humanoïde, animalisé ou hybride.
+Un YouBot peut être humanoïde, animalisé ou hybride.
 Mais il doit toujours rester identifiable comme un YouBot.
 
-Il possède obligatoirement le symbole officiel YOUBOTS visible :
-un Y surmonté d’un point (Y•).
+LOGO YOUBOTS :
+Le symbole officiel est un Y surmonté d’un point.
+Ce symbole Y• doit être visible sur le YouBot.
+Il peut apparaître sur le torse, le casque, l’épaule, une cape, une arme, un bouclier, un bijou, un cache-œil, un motif textile, une ceinture, une plaque mécanique ou un accessoire.
+Le symbole doit être intégré naturellement au design.
 
-Ce symbole est sacré dans l’univers YOUBOTS.
-Il représente à la fois :
-- le lien Maestrot / YouBot
-- une silhouette humaine levant les bras
-- la synchronisation vivante
+Un YouBot peut porter :
+vêtements intégrés,
+accessoires,
+armes non létales,
+gadgets,
+protections,
+éléments décoratifs,
+éléments textiles,
+éléments de mode,
+éléments culturels ou sportifs.
 
-Le symbole Y• peut apparaître sur :
-le torse,
-le casque,
-une casquette,
-une épaule,
-une cape,
-une arme,
-un bouclier,
-une ceinture,
-un bijou,
-un collier,
-un médaillon,
-un cache-œil,
-un vêtement,
-un motif textile,
-une armure,
-un accessoire,
-ou une partie du corps robotique.
-
-Le symbole peut être :
-grand ou discret,
-lumineux,
-gravé,
-brodé,
-métallique,
-peint,
-sculpté,
-ou intégré naturellement au design.
-
-Le point au-dessus du Y doit être visible quand possible.
-
-Un YouBot peut parfois porter :
-des vêtements intégrés ou ajoutés à son design,
-des accessoires,
-des armes,
-des gadgets,
-des protections,
-ou des éléments décoratifs.
-
-Mais ces ajouts doivent toujours respecter la direction artistique générale du YouBot et sembler naturels dans son design.
-
-Le rendu recherché doit être :
-photo réaliste,
-robot premium,
-toy collector haut de gamme,
-figurine officielle,
-textures propres,
-matériaux détaillés,
-éclairage cinématique,
-pose forte,
-présence charismatique.
-
-Le style doit évoquer :
-un personnage de manga premium,
-un jouet collector haut de gamme,
-un héros de jeu vidéo,
-ou un combattant stylisé non létal.
-
-Le design doit être fort, original, mémorable et cohérent.
+Ces ajouts doivent toujours respecter la direction artistique générale du YouBot.
 
 Interdit :
 reproduction quasi identique d’un personnage existant,
 copie directe d’un costume iconique sans adaptation,
-reprise exacte d’un visage, symbole ou silhouette protégée.
+reprise exacte d’un visage, symbole ou silhouette protégée,
+robot industriel banal,
+mecha géant,
+bébé mascotte,
+simple armure humaine.
 
 Autorisé :
 inspiration,
@@ -119,6 +100,7 @@ fusion d’archétypes,
 codes visuels détournés ou remixés.
 
 Le résultat doit toujours donner l’impression d’un vrai personnage officiel de l’univers YOUBOTS.
+Objectif émotionnel : provoquer une réaction wahou, premium, collector, impressionnante.
 `;
 
 app.get("/", (req, res) => {
