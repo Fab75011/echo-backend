@@ -1,4 +1,4 @@
-import express from "express";
+il import express from "express";
 import OpenAI from "openai";
 
 const openai = new OpenAI({
@@ -298,10 +298,10 @@ CONTRAINTES DE SORTIE :
 `;
 
     const image = await openai.images.generate({
-      model: "gpt-image-1",
-      prompt: finalPrompt,
-      size: "1024x1024"
-    });
+  model: "gpt-image-1",
+  prompt: finalPrompt,
+  size: "1024x1536"
+});
 
     const b64 = image.data?.[0]?.b64_json;
     const url = image.data?.[0]?.url;
