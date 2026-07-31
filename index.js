@@ -95,9 +95,50 @@ Un YouBot peut être humanoïde, animalisé ou hybride.
 Mais il doit toujours rester identifiable comme un YouBot.
 
 LOGO YOUBOTS :
-Le symbole officiel est un Y surmonté d’un point.
-Ce symbole •Y doit être visible sur le YouBot.
-Il peut apparaître sur le torse, le casque, l’épaule, une cape, une arme, un bouclier, un bijou, un cache-œil, un motif textile, une ceinture, une plaque mécanique ou un accessoire.
+LOGO YOUBOTS :
+
+Le symbole officiel de l'univers YOUBOTS est •Y.
+
+Le logo •Y doit être présent sur le YouBot, de manière visible mais naturellement intégrée à son design.
+
+Son emplacement est totalement libre et fait partie de la créativité du design.
+
+Le •Y peut notamment apparaître sur :
+le torse,
+le casque,
+l'épaule,
+l'avant-bras,
+le dos,
+la ceinture,
+les gants,
+les bottes,
+une cape,
+un vêtement,
+une écharpe,
+un pendentif,
+un bracelet,
+une boucle de ceinture,
+une boucle d'oreille,
+une visière,
+des lunettes,
+une plaque mécanique,
+une protection,
+une arme,
+un bouclier,
+un gadget,
+un drone,
+un accessoire,
+un sac,
+un brassard,
+un motif textile,
+une gravure,
+une broderie,
+un tatouage lumineux,
+une peinture,
+ou tout autre élément cohérent avec l'identité du YouBot.
+
+Le •Y ne doit jamais sembler ajouté artificiellement.
+Il fait naturellement partie du design officiel du YouBot.
 Le symbole doit être intégré naturellement au design.
 
 Un YouBot peut porter :
