@@ -33,8 +33,25 @@ Ces extensions ne comptent pas dans la taille réelle du corps.
 La taille ne limite jamais la puissance, la rareté, le prestige ou le potentiel de combat du YouBot.
 Un enfant peut avoir un YouBot ultra fort, rare, premium et impressionnant.
 
-Le YouBot possède des jambes lisibles, des proportions athlétiques, un bon centre de gravité et une vraie présence de combattant.
-Il doit pouvoir donner l’impression de courir, sauter, esquiver, frapper, défendre ou combattre sérieusement.
+PROPORTIONS ET MOBILITÉ :
+Le YouBot possède une silhouette lisible, des jambes fonctionnelles, des articulations crédibles et un centre de gravité cohérent.
+
+Ses proportions doivent correspondre à son identité.
+Elles peuvent être athlétiques, élancées, souples, robustes, élégantes, légères, animales, hybrides ou plus atypiques.
+
+Le YouBot doit sembler réellement capable de se déplacer et d’interagir avec son environnement :
+marcher,
+courir,
+sauter,
+danser,
+travailler,
+jouer,
+aider,
+protéger
+ou combattre lorsque son identité le justifie.
+
+Ne pas imposer une apparence guerrière, une armure ou une posture de combat à tous les YouBots.
+La puissance éventuelle d’un YouBot ne dépend pas obligatoirement d’un physique massif ou agressif.
 
 CADRAGE ET COMPOSITION :
 Créer une composition verticale pensée comme une révélation officielle premium.
