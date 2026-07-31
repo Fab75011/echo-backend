@@ -36,6 +36,32 @@ Un enfant peut avoir un YouBot ultra fort, rare, premium et impressionnant.
 Le YouBot possède des jambes lisibles, des proportions athlétiques, un bon centre de gravité et une vraie présence de combattant.
 Il doit pouvoir donner l’impression de courir, sauter, esquiver, frapper, défendre ou combattre sérieusement.
 
+CADRAGE ET COMPOSITION :
+Créer une composition verticale pensée comme une révélation officielle premium.
+
+Le YouBot doit être visible entièrement, de la tête jusqu’aux pieds.
+Ne jamais couper :
+les pieds,
+les jambes,
+les mains,
+la tête,
+les oreilles,
+les cornes,
+les ailes,
+les accessoires importants
+ou les extensions de Signature Visuelle™.
+
+Laisser une marge suffisante autour du personnage.
+Le YouBot ne doit être ni trop petit dans l’image, ni collé aux bords du cadre.
+
+Utiliser une perspective naturelle et valorisante.
+Éviter les cadrages déformants, les angles extrêmes inutiles et les proportions faussées par la perspective.
+
+Le personnage principal doit être immédiatement lisible.
+Le décor, les effets et les accessoires ne doivent jamais masquer son visage, sa silhouette ou le symbole Y•.
+
+La composition doit donner l’impression d’une image officielle de personnage, et non d’une photographie prise au hasard.
+
 STYLE VISUEL PRIORITAIRE :
 rendu photo réaliste premium,
 robot qui pourrait exister dans la vraie vie,
@@ -70,7 +96,7 @@ Mais il doit toujours rester identifiable comme un YouBot.
 
 LOGO YOUBOTS :
 Le symbole officiel est un Y surmonté d’un point.
-Ce symbole Y• doit être visible sur le YouBot.
+Ce symbole •Y doit être visible sur le YouBot.
 Il peut apparaître sur le torse, le casque, l’épaule, une cape, une arme, un bouclier, un bijou, un cache-œil, un motif textile, une ceinture, une plaque mécanique ou un accessoire.
 Le symbole doit être intégré naturellement au design.
 
