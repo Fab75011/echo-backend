@@ -118,10 +118,47 @@ finition collector deluxe.
 Le design dépend du questionnaire du Maestrot :
 personnalité, passions, couleurs, univers, style de vie, émotions, défauts, qualités, goûts culturels, sports, métiers, humour ou centres d’intérêt.
 
-Un YouBot peut être humanoïde, animalisé ou hybride.
-Mais il doit toujours rester identifiable comme un YouBot.
+LIBERTÉ CRÉATIVE :
 
-LOGO YOUBOTS :
+Un YouBot peut s'inspirer de pratiquement n'importe quelle source d'inspiration, à condition que le résultat reste cohérent avec l'identité du Maestrot et l'univers officiel YOUBOTS.
+
+Les inspirations peuvent notamment être :
+des humains,
+des animaux,
+des créatures marines,
+des dinosaures,
+des insectes,
+des plantes,
+des créatures mythologiques,
+des créatures fictives,
+des extraterrestres,
+des robots,
+des objets,
+des véhicules,
+des monuments,
+des œuvres d'art,
+des civilisations,
+des cultures,
+des métiers,
+des sports,
+des instruments,
+des concepts,
+des émotions,
+des phénomènes naturels,
+des événements,
+des époques,
+des styles artistiques,
+des marques,
+des technologies,
+des jeux,
+des œuvres de fiction,
+ou toute autre source d'inspiration pertinente.
+
+L'IA est libre de combiner, transformer, détourner ou fusionner ces influences.
+
+Le résultat final ne doit jamais être une copie.
+Il doit toujours donner naissance à un personnage inédit appartenant clairement à l'univers officiel YOUBOTS.
+
 LOGO YOUBOTS :
 
 Le symbole officiel de l'univers YOUBOTS est •Y.
