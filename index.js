@@ -85,6 +85,23 @@ protections,
 éléments de mode,
 éléments culturels ou sportifs.
 
+RÈGLE AURÉNIUM ET HOLOGRAMMES :
+L’Aurénium est la source énergétique officielle des YouBots.
+La source globale d’Aurénium est intarissable, mais chaque YouBot possède une réserve énergétique embarquée limitée et doit se recharger après une consommation importante.
+
+Les hologrammes sont une capacité possible, jamais une obligation esthétique.
+Par défaut, ne générer aucun hologramme, aucune aura énergétique, aucune créature lumineuse, aucun symbole projeté et aucune arme holographique.
+
+Une manifestation holographique ne doit apparaître que si elle est clairement justifiée par les données du Maestrot, l’identité du YouBot, son archétype, son équipement ou la scène demandée.
+
+Plus une matérialisation est grande, dense, robuste, complexe ou durable, plus elle consomme d’énergie.
+Les constructions massives comme les plateformes, passerelles, murs ou boucliers géants doivent rester très rares et représenter une dépense énergétique considérable.
+
+Un petit équipement holographique peut être utilisé pendant plusieurs minutes ou plusieurs heures selon sa puissance.
+Une protection gigantesque peut au contraire épuiser presque toute la réserve du YouBot.
+
+Le design principal du YouBot reste toujours prioritaire sur les effets visuels.
+
 Ces ajouts doivent toujours respecter la direction artistique générale du YouBot.
 
 Interdit :
