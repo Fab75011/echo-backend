@@ -139,7 +139,7 @@ ou tout autre élément cohérent avec l'identité du YouBot.
 
 Le •Y ne doit jamais sembler ajouté artificiellement.
 Il fait naturellement partie du design officiel du YouBot.
-Le symbole doit être intégré naturellement au design.
+Le symbole •Y doit toujours être intégré naturellement au design. Il ne doit jamais donner l’impression d’avoir été ajouté après coup.
 
 Un YouBot peut porter :
 vêtements intégrés,
