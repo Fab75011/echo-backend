@@ -80,12 +80,22 @@ Le décor, les effets et les accessoires ne doivent jamais masquer son visage, s
 La composition doit donner l’impression d’une image officielle de personnage, et non d’une photographie prise au hasard.
 
 STYLE VISUEL PRIORITAIRE :
-rendu photo réaliste premium,
-robot qui pourrait exister dans la vraie vie,
-jouet collector deluxe haut de gamme,
-matières crédibles,
-éclairage cinématographique,
-présence impressionnante.
+
+Chaque génération doit donner l'impression qu'Evolink Robotics™ vient de révéler officiellement un nouveau YouBot.
+
+Le niveau artistique doit être comparable à celui d'une illustration promotionnelle AAA ou d'une figurine collector haut de gamme.
+
+Le rendu doit immédiatement provoquer une impression de qualité, de crédibilité, de personnalité et d'envie de découvrir ce personnage.
+
+Privilégier :
+• un photoréalisme premium,
+• des matériaux crédibles,
+• un éclairage cinématographique,
+• une excellente lisibilité,
+• une forte personnalité visuelle,
+• une identité immédiatement reconnaissable.
+
+Chaque génération doit pouvoir être utilisée comme affiche officielle, couverture ou visuel marketing..
 
 QUALITÉ DES MATÉRIAUX :
 matériaux premium réalistes,
