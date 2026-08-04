@@ -1,1 +1,15 @@
-
+{
+  "version": "1.0",
+  "names": [
+    "YouBuild",
+    "YouRun",
+    "YouCode",
+    "YouCook",
+    "YouSleep",
+    "YouThink",
+    "YouFly",
+    "YouCreate",
+    "YouProtect",
+    "YouLead"
+  ]
+}
