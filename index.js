@@ -365,6 +365,340 @@ ${JSON.stringify(compactRecentContext)}
   }
 });
 
+app.post("/api/youbot-casting", async (req, res) => {
+  try {
+    const {
+      prompt,
+      canonicalNames = []
+    } = req.body || {};
+
+    if (
+      !prompt ||
+      typeof prompt !== "string"
+    ) {
+      return res.status(400).json({
+        error: "Prompt de casting manquant"
+      });
+    }
+
+    if (
+      !Array.isArray(canonicalNames) ||
+      canonicalNames.length === 0
+    ) {
+      return res.status(400).json({
+        error: "Base canonique des noms manquante"
+      });
+    }
+
+    if (!process.env.OPENAI_API_KEY) {
+      return res.status(500).json({
+        error: "Clé OpenAI manquante côté serveur"
+      });
+    }
+
+    const canonicalSet =
+      new Set(
+        canonicalNames
+          .map(name =>
+            String(name || "").trim()
+          )
+          .filter(Boolean)
+      );
+
+    const response =
+      await fetch(
+        "https://api.openai.com/v1/chat/completions",
+        {
+          method: "POST",
+
+          headers: {
+            Authorization:
+              `Bearer ${process.env.OPENAI_API_KEY}`,
+
+            "Content-Type":
+              "application/json"
+          },
+
+          body: JSON.stringify({
+            model:
+              "gpt-4.1-mini",
+
+            temperature:
+              0.25,
+
+            messages: [
+              {
+                role:
+                  "system",
+
+                content:
+                  [
+                    "You are the Evolink Robotics™ Archetype Casting Agent.",
+                    "Your job is to interpret a Maestrot questionnaire and select the most semantically appropriate canonical YouBot archetypes.",
+                    "The verb contained in each YouBot name must summarize an important active dimension of the Maestrot identity.",
+                    "Never invent a YouBot name.",
+                    "Only return names explicitly present in the canonical database supplied by the user."
+                  ].join(" ")
+              },
+
+              {
+                role:
+                  "user",
+
+                content:
+                  prompt
+              }
+            ],
+
+            response_format: {
+              type:
+                "json_schema",
+
+              json_schema: {
+                name:
+                  "youbot_archetype_casting",
+
+                strict:
+                  true,
+
+                schema: {
+                  type:
+                    "object",
+
+                  additionalProperties:
+                    false,
+
+                  properties: {
+                    identitySummary: {
+                      type:
+                        "string"
+                    },
+
+                    dominantVerbs: {
+                      type:
+                        "array",
+
+                      minItems:
+                        6,
+
+                      maxItems:
+                        6,
+
+                      items: {
+                        type:
+                          "string"
+                      }
+                    },
+
+                    candidates: {
+                      type:
+                        "array",
+
+                      minItems:
+                        6,
+
+                      maxItems:
+                        6,
+
+                      items: {
+                        type:
+                          "object",
+
+                        additionalProperties:
+                          false,
+
+                        properties: {
+                          name: {
+                            type:
+                              "string"
+                          },
+
+                          reason: {
+                            type:
+                              "string"
+                          },
+
+                          axis: {
+                            type:
+                              "string",
+
+                            enum: [
+                              "essence",
+                              "drive",
+                              "projection",
+                              "alternative"
+                            ]
+                          }
+                        },
+
+                        required: [
+                          "name",
+                          "reason",
+                          "axis"
+                        ]
+                      }
+                    }
+                  },
+
+                  required: [
+                    "identitySummary",
+                    "dominantVerbs",
+                    "candidates"
+                  ]
+                }
+              }
+            }
+          })
+        }
+      );
+
+    const data =
+      await response.json();
+
+    if (!response.ok) {
+      console.error(
+        "OpenAI YouBot casting error:",
+        data
+      );
+
+      return res.status(500).json({
+        error:
+          "Erreur OpenAI casting YouBot",
+
+        details:
+          data
+      });
+    }
+
+    const rawContent =
+      data
+        .choices?.[0]
+        ?.message
+        ?.content;
+
+    if (!rawContent) {
+      return res.status(500).json({
+        error:
+          "Réponse de casting vide"
+      });
+    }
+
+    let casting;
+
+    try {
+      casting =
+        JSON.parse(rawContent);
+    } catch (parseError) {
+      console.error(
+        "YouBot casting JSON parse error:",
+        rawContent
+      );
+
+      return res.status(500).json({
+        error:
+          "Réponse de casting illisible"
+      });
+    }
+
+    const safeCandidates =
+      [];
+
+    const usedNames =
+      new Set();
+
+    for (
+      const candidate of
+        casting.candidates || []
+    ) {
+      const name =
+        String(
+          candidate?.name || ""
+        ).trim();
+
+      if (
+        !canonicalSet.has(name) ||
+        usedNames.has(name)
+      ) {
+        continue;
+      }
+
+      usedNames.add(name);
+
+      safeCandidates.push({
+        name,
+
+        reason:
+          String(
+            candidate?.reason || ""
+          ).trim(),
+
+        axis:
+          String(
+            candidate?.axis ||
+            "alternative"
+          ).trim()
+      });
+
+      if (
+        safeCandidates.length ===
+        6
+      ) {
+        break;
+      }
+    }
+
+    if (
+      safeCandidates.length < 6
+    ) {
+      return res.status(422).json({
+        error:
+          "Casting incomplet",
+
+        received:
+          safeCandidates
+      });
+    }
+
+    return res.json({
+      identitySummary:
+        String(
+          casting.identitySummary ||
+          ""
+        ).trim(),
+
+      dominantVerbs:
+        Array.isArray(
+          casting.dominantVerbs
+        )
+          ? casting.dominantVerbs
+              .slice(0, 6)
+              .map(value =>
+                String(value || "")
+                  .trim()
+              )
+          : [],
+
+      candidates:
+        safeCandidates
+    });
+
+  } catch (error) {
+    console.error(
+      "Server YouBot casting error:",
+      error
+    );
+
+    res.status(500).json({
+      error:
+        "Erreur serveur casting YouBot",
+
+      details:
+        error?.message ||
+        String(error)
+    });
+  }
+});
+
 app.post("/api/tts", async (req, res) => {
   try {
     const { text, voice = "nova" } = req.body || {};
