@@ -366,6 +366,26 @@ ${JSON.stringify(compactRecentContext)}
 });
 
 app.post("/api/youbot-casting", async (req, res) => {
+  console.log(
+  "[YOUBOT CASTING] Route appelée",
+  {
+    time:
+      new Date().toISOString(),
+    promptLength:
+      String(
+        req.body?.prompt ||
+        ""
+      ).length,
+    canonicalNamesCount:
+      Array.isArray(
+        req.body?.canonicalNames
+      )
+        ? req.body
+            .canonicalNames
+            .length
+        : 0
+  }
+);
   try {
     const {
       prompt,
@@ -404,6 +424,10 @@ app.post("/api/youbot-casting", async (req, res) => {
           )
           .filter(Boolean)
       );
+
+    console.log(
+  "[YOUBOT CASTING] Appel OpenAI — départ"
+);
 
     const response =
       await fetch(
