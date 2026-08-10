@@ -576,6 +576,10 @@ app.post("/api/youbot-casting", async (req, res) => {
         }
       );
 
+        console.log(
+      "[YOUBOT CASTING] Appel OpenAI — retour"
+    );
+
     const data =
       await response.json();
 
@@ -707,6 +711,21 @@ app.post("/api/youbot-casting", async (req, res) => {
     });
 
   } catch (error) {
+    console.error(
+  "[YOUBOT CASTING] ERREUR",
+  {
+    message:
+      error?.message,
+    status:
+      error?.status,
+    code:
+      error?.code,
+    type:
+      error?.type,
+    stack:
+      error?.stack
+  }
+);
     console.error(
       "Server YouBot casting error:",
       error
