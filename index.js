@@ -848,9 +848,14 @@ const compactFinalPrompt =
       "\n\n"
     )
     .trim();
+
+    const safeFinalPrompt =
+  String(compactFinalPrompt || finalPrompt)
+    .slice(0, 31900);
+    
     const image = await openai.images.generate({
   model: "gpt-image-1",
-  prompt: compactFinalPrompt,
+  prompt: safeFinalPrompt,
   size: "1024x1536"
 });
 
