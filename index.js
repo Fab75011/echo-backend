@@ -1,4 +1,4 @@
-import express from "express";
+import express from "express"
 import OpenAI from "openai";
 
 const openai = new OpenAI({
@@ -837,10 +837,20 @@ ACTION / PREMIÈRE ACTIVATION :
 - rendu photo réaliste, spectaculaire, cohérent, collector deluxe
 - pas de personnage existant copié
 `;
-
+const compactFinalPrompt =
+  finalPrompt
+    .replace(
+      /[ \t]+/g,
+      " "
+    )
+    .replace(
+      /\n{3,}/g,
+      "\n\n"
+    )
+    .trim();
     const image = await openai.images.generate({
   model: "gpt-image-1",
-  prompt: finalPrompt,
+  prompt: compactFinalPrompt,
   size: "1024x1536"
 });
 
