@@ -857,11 +857,80 @@ const compactFinalPrompt =
   String(compactFinalPrompt || finalPrompt)
     .slice(0, 31900);
     
-    const image = await openai.images.generate({
-  model: "gpt-image-1",
-  prompt: safeFinalPrompt,
-  size: "1024x1536"
-});
+    let image;
+
+if (
+  referenceImage &&
+  mode === "logo-correction"
+) {
+  const editResponse =
+    await openai.responses.create({
+      model: "gpt-5",
+      input: [
+        {
+          role: "user",
+          content: [
+            {
+              type: "input_text",
+              text: safeFinalPrompt
+            },
+            {
+              type: "input_image",
+              image_url: referenceImage,
+              detail: "high"
+            }
+          ]
+        }
+      ],
+      tools: [
+        {
+          type: "image_generation",
+          action: "edit",
+          model: "gpt-image-1",
+          input_fidelity: "high",
+          size: "1024x1536",
+          quality: "high"
+        }
+      ],
+      tool_choice: {
+        type: "image_generation"
+      }
+    });
+
+  const imageCall =
+    editResponse.output?.find(
+      item =>
+        item.type ===
+        "image_generation_call"
+    );
+
+  const editedBase64 =
+    imageCall?.result ||
+    imageCall?.b64_json ||
+    "";
+
+  if (!editedBase64) {
+    throw new Error(
+      "Correction •Y : aucune image éditée retournée."
+    );
+  }
+
+  image = {
+    data: [
+      {
+        b64_json:
+          editedBase64
+      }
+    ]
+  };
+} else {
+  image =
+    await openai.images.generate({
+      model: "gpt-image-1",
+      prompt: safeFinalPrompt,
+      size: "1024x1536"
+    });
+}
 
     const b64 = image.data?.[0]?.b64_json;
     const url = image.data?.[0]?.url;
@@ -920,11 +989,80 @@ STYLE :
 - pas de copie directe d’un personnage existant
 `;
 
-    const image = await openai.images.generate({
-      model: "gpt-image-1",
-      prompt: finalPrompt,
-      size: "1024x1024"
+    let image;
+
+if (
+  referenceImage &&
+  mode === "logo-correction"
+) {
+  const editResponse =
+    await openai.responses.create({
+      model: "gpt-5",
+      input: [
+        {
+          role: "user",
+          content: [
+            {
+              type: "input_text",
+              text: safeFinalPrompt
+            },
+            {
+              type: "input_image",
+              image_url: referenceImage,
+              detail: "high"
+            }
+          ]
+        }
+      ],
+      tools: [
+        {
+          type: "image_generation",
+          action: "edit",
+          model: "gpt-image-1",
+          input_fidelity: "high",
+          size: "1024x1536",
+          quality: "high"
+        }
+      ],
+      tool_choice: {
+        type: "image_generation"
+      }
     });
+
+  const imageCall =
+    editResponse.output?.find(
+      item =>
+        item.type ===
+        "image_generation_call"
+    );
+
+  const editedBase64 =
+    imageCall?.result ||
+    imageCall?.b64_json ||
+    "";
+
+  if (!editedBase64) {
+    throw new Error(
+      "Correction •Y : aucune image éditée retournée."
+    );
+  }
+
+  image = {
+    data: [
+      {
+        b64_json:
+          editedBase64
+      }
+    ]
+  };
+} else {
+  image =
+    await openai.images.generate({
+      model: "gpt-image-1",
+      prompt: safeFinalPrompt,
+      size: "1024x1536"
+    });
+}
 
     const b64 = image.data?.[0]?.b64_json;
     const url = image.data?.[0]?.url;
