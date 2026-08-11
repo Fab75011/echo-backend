@@ -1,4 +1,4 @@
-import express from "express"
+il import express from "express"
 import OpenAI from "openai";
 
 const openai = new OpenAI({
@@ -792,7 +792,11 @@ app.post("/api/tts", async (req, res) => {
 
 app.post("/api/youbot-image", async (req, res) => {
   try {
-    const { prompt } = req.body || {};
+    const {
+  prompt,
+  referenceImage = "",
+  mode = "original"
+} = req.body || {};
 
     if (!prompt || typeof prompt !== "string") {
       return res.status(400).json({ error: "Prompt manquant" });
