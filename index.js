@@ -888,6 +888,9 @@ app.post("/api/youbot-manga", async (req, res) => {
     if (!process.env.OPENAI_API_KEY) {
       return res.status(500).json({ error: "Clé OpenAI manquante côté serveur" });
     }
+        const safeUserPrompt =
+      String(prompt)
+        .slice(0, 30000);
 
     const finalPrompt = `
 ${YOUBOT_VISUAL_BIBLE}
@@ -896,7 +899,7 @@ MISSION :
 Transformer ou générer ce YouBot en version manga/anime premium officielle YOUBOTS.
 
 DONNÉES DU YOUBOT :
-${prompt}
+${safeUserPrompt}
 
 STYLE :
 - manga / anime shōnen premium
