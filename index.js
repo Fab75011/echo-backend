@@ -811,12 +811,28 @@ Créer l’image officielle du YouBot demandé ci-dessous.
 DONNÉES DU YOUBOT :
 ${prompt}
 
-CONTRAINTES DE SORTIE :
+CONTRAINTES DE SORTIE — PRIORITÉ FINALE :
 - image verticale premium
-- YouBot visible clairement
+- YouBot entier et clairement visible
 - corps du YouBot entre 1m20 et 1m70 maximum hors extensions visuelles
 - YouBot généralement plus petit que son Maestrot
-- symbole Y• visible
+
+EMBLÈME OFFICIEL — CONTRAINTE ABSOLUE :
+- l’emblème officiel exact est •Y
+- il est composé d’un point circulaire distinct placé clairement AU-DESSUS d’un Y stylisé
+- ne jamais produire Y• avec le point à droite ou sous le Y
+- ne jamais produire un simple Y
+- ne jamais fusionner le point avec le Y
+- au moins un •Y complet doit être immédiatement lisible
+- le torse ou la poitrine est l’emplacement principal privilégié, sauf si une autre intégration est artistiquement nettement plus pertinente
+
+ACTION / PREMIÈRE ACTIVATION :
+- respecter impérativement l’action, le mouvement et le langage corporel demandés dans les DONNÉES DU YOUBOT
+- lorsqu’un archétype implique naturellement une action ou un mouvement physique, capturer le YouBot PENDANT cette action
+- dans ce cas, une pose statique, neutre, d’attente ou de présentation est invalide
+- le mouvement doit être visible dans la posture réelle du corps : trajectoire, transfert du poids, propulsion, appuis et intention
+- si l’archétype est abstrait ou non physique, ne pas forcer artificiellement un mouvement
+
 - pas de texte parasite illisible
 - rendu photo réaliste, spectaculaire, cohérent, collector deluxe
 - pas de personnage existant copié
