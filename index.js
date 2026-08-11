@@ -1,4 +1,4 @@
-il import express from "express"
+import express from "express"
 import OpenAI from "openai";
 
 const openai = new OpenAI({
