@@ -7,7 +7,7 @@ const openai = new OpenAI({
 
 const app = express();
 
-app.use(express.json({ limit: "2mb" }));
+app.use(express.json({ limit: "15mb" }));
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
